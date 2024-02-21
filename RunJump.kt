@@ -1,4 +1,4 @@
-interface RunJump {
+public interface RunJump {
     val _name:String
     fun printInfoRun(){
         println("$_name can run")
@@ -7,4 +7,5 @@ interface RunJump {
     fun printInfoJump(){
         println("$_name can jump")
     }
+
 }
