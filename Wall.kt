@@ -1,12 +1,12 @@
-open class Wall (var height:Int, val name:String):RunJump  {
+open class Wall (private var height:Int, private val name:String):RunJump  {
     constructor(height:Int ):this(height,name = "")
     override val _name: String
         get() = name
 
-    fun jumping(n:Int) {
+    fun jumping(n:Int,name: String) {
         if(n >= height) {
-            println("You jumped successfully!")
+            println("$name jumped height-$height successfully!")
         }
-        else { println("You didn't jump successfully!!") }
+        else { println("$name didn't jump height-$height successfully!!") }
     }
 }
