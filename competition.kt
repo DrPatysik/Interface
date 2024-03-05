@@ -11,28 +11,21 @@ fun main(){
     Person("Maria"),
     Person("Oleg")
     )
+    val a = RunTrack()
+    val b = RunTrack()
+    val c = RunTrack()
+    val a1 = Wall()
+    val b1 = Wall()
+    val c1 = Wall()
 
     var barriers = mutableListOf<RunJump>(
-        RunTrack(),
-        Wall(),
-        RunTrack(),
-        Wall(),
-        RunTrack(),
-        Wall(),
-        RunTrack(),
-        RunTrack(),
-        Wall()
+        a, b, c, a1, b1, c1
     )
 
     for(m in competitionMembers ) {
         for (b in barriers) {
-            if (b is RunTrack)// это добавила в надежде,что что-то поменяется
-            {
-
-                m.runningOnTrack(b.length, m.name1) //выдает длину беговой дорожки и высоту стены одну и ту же у
-                                                    //представителя класса
-                m.jumping(b.height, m.name1)
-            }
+            m.runningOnTrack(b.length)
+            m.jumping(b.height)
         }
     }
 }

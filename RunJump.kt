@@ -11,24 +11,24 @@ public interface RunJump {
     fun printInfoJump(){
         println("$name1 can jump")
     }
-    fun runningOnTrack(n:Int,name:String) {
-        if(n >= length) {
+    fun runningOnTrack(n:Int) {
+        if(n <= length) {
             result
-            println("$name ran length-${length} successfully!")
+            println("$name1 ran length-${n} successfully!")
         }
         else {
             result = false
-            println("$name didn't run length-${length} successfully!!") }
+            println("$name1 didn't run length-${n} successfully!!") }
     }
 
-    fun jumping(n:Int,name: String) {
-        if(n >= height) {
+    fun jumping(n:Int) {
+        if(n <= height) {
             result
-            println("$name jumped height-$height successfully!")
+            println("$name1 jumped height-$n successfully!")
         }
         else {
             result = false
-            println("$name didn't jump height-$height successfully!!")
+            println("$name1 didn't jump height-$n successfully!!")
         }
     }
 
