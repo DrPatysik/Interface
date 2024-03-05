@@ -2,8 +2,6 @@ public interface RunJump {
     val name1:String
     var length:Int
     var height:Int
-    var result:Boolean
-
 
     fun printInfoRun(){
         println("$name1 can run")
@@ -11,25 +9,29 @@ public interface RunJump {
     fun printInfoJump(){
         println("$name1 can jump")
     }
-    fun runningOnTrack(n:Int) {
+    fun runningOnTrack(n:Int):Boolean {
+        var result:Boolean
         if(n <= length) {
-            result
+            result = true
             println("$name1 ran length-${n} successfully!")
         }
         else {
             result = false
             println("$name1 didn't run length-${n} successfully!!") }
+        return result
     }
 
-    fun jumping(n:Int) {
+    fun jumping(n:Int):Boolean {
+        var result:Boolean
         if(n <= height) {
-            result
+            result = true
             println("$name1 jumped height-$n successfully!")
         }
         else {
-            result = false
+           result = false
             println("$name1 didn't jump height-$n successfully!!")
         }
+        return result
     }
 
 }

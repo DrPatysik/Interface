@@ -1,6 +1,6 @@
 fun main(){
 
-    var competitionMembers = mutableListOf<RunJump>(
+    val competitionMembers = mutableListOf<RunJump>(
     Cat("Barsik"),
     Cat("Murzik"),
     Cat("Murka"),
@@ -12,20 +12,24 @@ fun main(){
     Person("Oleg")
     )
     val a = RunTrack()
-    val b = RunTrack()
-    val c = RunTrack()
     val a1 = Wall()
+    val b = RunTrack()
     val b1 = Wall()
+    val c = RunTrack()
     val c1 = Wall()
 
-    var barriers = mutableListOf<RunJump>(
+    val barriers = mutableListOf<RunJump>(
         a, b, c, a1, b1, c1
     )
 
     for(m in competitionMembers ) {
-        for (b in barriers) {
-            m.runningOnTrack(b.length)
-            m.jumping(b.height)
+        for (bar in barriers) {
+           when(bar) {
+               is RunTrack -> { if( !m.runningOnTrack(bar.length)) {break};
+               }
+                is Wall -> { if ( !m.jumping(bar.height)) {break};
+                }
+           }
         }
     }
 }

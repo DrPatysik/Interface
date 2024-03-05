@@ -15,11 +15,6 @@ open class Cat(private val name:String ):RunJump {
         get() = jump
         set(value) {}
 
-    private var result1 = true
-    override var result: Boolean
-        get() = result1
-        set(value) {}
-
     fun printInfo(){
         println("$name, run-$run, jump-$jump ")
     }

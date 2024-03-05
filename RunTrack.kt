@@ -5,20 +5,13 @@ open class RunTrack():RunJump  {
     override val name1: String
         get() = name
 
-    private var height1 = 0
+    private var height1 = 45
     override var height: Int
         get() = height1
         set(value) {}
 
-    private var length1 = Random.nextInt(1, 30)
+    private var length1 = Random.nextInt(1, 25)
     override var length: Int
         get() = this.length1
         set(value){}
-
-    private var result1 = true
-    override var result: Boolean
-        get() = result1
-        set(value) {}
-
-
 }
