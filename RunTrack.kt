@@ -1,12 +1,24 @@
-open class RunTrack(private var length:Int, private val name:String):RunJump  {
-    constructor( length:Int ):this(length,name = "")
-    override val _name: String
+import kotlin.random.Random
+
+open class RunTrack():RunJump  {
+    private val name = ""
+    override val name1: String
         get() = name
 
-    fun runningOnTrack(n:Int,name:String) {
-         if(n >= length) {
-             println("$name ran length-${length} successfully!")
-         }
-             else { println("$name didn't run length-${length} successfully!!") }
-    }
+    private var height1 = 0
+    override var height: Int
+        get() = height1
+        set(value) {}
+
+    private var length1 = Random.nextInt(1, 30)
+    override var length: Int
+        get() = this.length1
+        set(value){}
+
+    private var result1 = true
+    override var result: Boolean
+        get() = result1
+        set(value) {}
+
+
 }
