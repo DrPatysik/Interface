@@ -26,7 +26,8 @@ fun main(){
 
     for(m in competitionMembers ) {
         for (b in barriers) {
-            if (b is RunTrack) {
+            if (b is RunTrack)// это добавила в надежде,что что-то поменяется
+            {
 
                 m.runningOnTrack(b.length, m.name1) //выдает длину беговой дорожки и высоту стены одну и ту же у
                                                     //представителя класса
